@@ -28,6 +28,7 @@
     </me.zhanghai.android.files.ui.CoordinatorAppBarLayout>
 
     <me.zhanghai.android.files.ui.CoordinatorScrollingFrameLayout
+        android:id="@+id/coordinatorScrollingFrameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

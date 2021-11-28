@@ -74,6 +74,7 @@ import me.zhanghai.android.files.provider.archive.createArchiveRootPath
 import me.zhanghai.android.files.provider.archive.isArchivePath
 import me.zhanghai.android.files.provider.linux.isLinuxPath
 import me.zhanghai.android.files.settings.Settings
+import me.zhanghai.android.files.settings.SettingsActivity
 import me.zhanghai.android.files.terminal.Terminal
 import me.zhanghai.android.files.ui.CoordinatorAppBarLayout
 import me.zhanghai.android.files.ui.FixQueryChangeSearchView
@@ -402,6 +403,15 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
             }
             R.id.action_refresh -> {
                 refresh()
+                true
+            }
+            R.id.action_up_refresh -> {
+                refresh()
+                true
+            }
+            R.id.action_go_setting -> {
+                val intent = SettingsActivity::class.createIntent()
+                startActivity(intent)
                 true
             }
             R.id.action_select_all -> {
